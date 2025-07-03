@@ -18175,6 +18175,107 @@
 									"name": "QueuePull",
 									"item": [
 										{
+											"name": "SendItem",
+											"item": [
+												{
+													"name": "/api/v1/TmacProxy/SendItem",
+													"id": "32213770-cc3e045d-5e9c-4426-b79a-c30d0e2dc8a2",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "text/plain"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"agentId\": \"<string>\",\n  \"inboxSessionId\": \"<string>\",\n  \"outboxSessionId\": \"<string>\",\n  \"routeId\": \"<string>\",\n  \"toList\": \"<string>\",\n  \"ccList\": \"<string>\",\n  \"bccList\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"body\": \"<string>\",\n  \"typeOfResponse\": \"<string>\",\n  \"attachmentFileList\": \"<string>\",\n  \"tmacServer\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/TmacProxy/SendItem",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"TmacProxy",
+																"SendItem"
+															]
+														}
+													},
+													"response": [
+														{
+															"id": "32213770-0f14b8dd-93c3-404c-97b0-5421477828f7",
+															"name": "Success",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "text/plain"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"agentId\": \"<string>\",\n  \"inboxSessionId\": \"<string>\",\n  \"outboxSessionId\": \"<string>\",\n  \"routeId\": \"<string>\",\n  \"toList\": \"<string>\",\n  \"ccList\": \"<string>\",\n  \"bccList\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"body\": \"<string>\",\n  \"typeOfResponse\": \"<string>\",\n  \"attachmentFileList\": \"<string>\",\n  \"tmacServer\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/TmacProxy/SendItem",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"TmacProxy",
+																		"SendItem"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"responseTime": null,
+															"body": "{\n  \"d\": {\n    \"SessionID\": \"<string>\",\n    \"InSessionID\": \"<string>\",\n    \"From\": \"<string>\",\n    \"ToList\": \"<string>\",\n    \"CcList\": \"<string>\",\n    \"BccList\": \"<string>\",\n    \"Subject\": \"<string>\",\n    \"Body\": \"<string>\",\n    \"IsHtml\": \"<boolean>\",\n    \"SendDate\": \"<string>\",\n    \"SendTime\": \"<string>\",\n    \"SendStatus\": \"<string>\",\n    \"CreatedDate\": \"<string>\",\n    \"CreatedTime\": \"<string>\",\n    \"CreatedBy\": \"<string>\",\n    \"ConversationID\": \"<string>\",\n    \"CurrentStatus\": \"<string>\",\n    \"CurrentStatusDate\": \"<string>\",\n    \"CurrentStatusTime\": \"<string>\",\n    \"CurrentServicePoint\": \"<string>\",\n    \"Mailbox\": \"<string>\",\n    \"Label\": \"<string>\",\n    \"HasAttachments\": \"<boolean>\",\n    \"CmSkill\": \"<string>\",\n    \"AgentName\": \"<string>\",\n    \"Attachments\": [\n      {\n        \"SessionID\": \"<string>\",\n        \"Direction\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"Url\": \"<string>\",\n        \"DirectoryPath\": \"<string>\",\n        \"IsCloud\": \"<boolean>\"\n      },\n      {\n        \"SessionID\": \"<string>\",\n        \"Direction\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"Url\": \"<string>\",\n        \"DirectoryPath\": \"<string>\",\n        \"IsCloud\": \"<boolean>\"\n      }\n    ],\n    \"RouteId\": \"<string>\",\n    \"MailAccountId\": \"<string>\",\n    \"SmmModel\": {\n      \"SessionId\": \"<string>\",\n      \"Channel\": \"<string>\",\n      \"SubChannel\": \"<string>\",\n      \"Type\": \"<string>\",\n      \"Id\": {\n        \"MainId\": \"<string>\",\n        \"PostId\": \"<string>\",\n        \"CommentId\": \"<string>\",\n        \"ParentId\": \"<string>\"\n      },\n      \"EventDateTime\": {\n        \"EventCreatedDateTime\": \"<dateTime>\",\n        \"EventReceivedDateTime\": \"<dateTime>\"\n      },\n      \"Body\": {\n        \"Text\": \"<string>\",\n        \"SmmAttachments\": [\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          },\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          }\n        ]\n      },\n      \"Item\": \"<string>\",\n      \"StatusType\": \"<string>\",\n      \"Recipient\": {\n        \"FromId\": \"<string>\",\n        \"FromName\": \"<string>\",\n        \"ToId\": \"<string>\",\n        \"ToName\": \"<string>\"\n      },\n      \"Verb\": \"<string>\",\n      \"IsBusinessAccount\": \"<boolean>\"\n    },\n    \"SocialMediaData\": {\n      \"Channel\": \"<string>\",\n      \"CommentInSessionId\": \"<string>\",\n      \"CommentOutSessionId\": \"<string>\",\n      \"Account\": \"<string>\",\n      \"Posts\": {\n        \"SessionId\": \"<string>\",\n        \"Channel\": \"<string>\",\n        \"MainId\": \"<string>\",\n        \"PostId\": \"<string>\",\n        \"AccountId\": \"<string>\",\n        \"AccountName\": \"<string>\",\n        \"InsertionDateTime\": \"<dateTime>\",\n        \"CreatedDateTime\": \"<dateTime>\",\n        \"ReceivedDateTime\": \"<dateTime>\",\n        \"UpdatedDateTime\": \"<dateTime>\",\n        \"IsDeleted\": \"<integer>\",\n        \"DeletedDateTime\": \"<dateTime>\",\n        \"PostText\": {\n          \"SessionId\": \"<string>\",\n          \"TextId\": \"<string>\",\n          \"Text\": \"<string>\",\n          \"InsertionDateTime\": \"<dateTime>\",\n          \"UpdatedDateTime\": \"<dateTime>\",\n          \"PreviousComment\": \"<string>\"\n        },\n        \"CommentsList\": [\n          {\n            \"SessionId\": \"<string>\",\n            \"MainId\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"ParentId\": \"<string>\",\n            \"FromId\": \"<string>\",\n            \"FromName\": \"<string>\",\n            \"ToId\": \"<string>\",\n            \"ToName\": \"<string>\",\n            \"Direction\": \"<string>\",\n            \"MakerSkill\": \"<string>\",\n            \"CheckerSkill\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"CreatedDateTime\": \"<dateTime>\",\n            \"ReceivedDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\",\n            \"IsDeleted\": \"<integer>\",\n            \"IsEdited\": \"<integer>\",\n            \"DeletedDateTime\": \"<dateTime>\",\n            \"CommentText\": {\n              \"SessionId\": \"<string>\",\n              \"TextId\": \"<string>\",\n              \"Text\": \"<string>\",\n              \"InsertionDateTime\": \"<dateTime>\",\n              \"UpdatedDateTime\": \"<dateTime>\",\n              \"PreviousComment\": \"<string>\"\n            },\n            \"ReplyComments\": [\n              {\n                \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n              },\n              {\n                \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n              }\n            ],\n            \"CommentAttachments\": [\n              {\n                \"SmmType\": \"<string>\",\n                \"PostId\": \"<string>\",\n                \"CommentId\": \"<string>\",\n                \"MediaId\": \"<string>\",\n                \"MediaUrl\": \"<string>\",\n                \"MediaType\": \"<string>\",\n                \"InsertionDateTime\": \"<dateTime>\",\n                \"UpdatedDateTime\": \"<dateTime>\"\n              },\n              {\n                \"SmmType\": \"<string>\",\n                \"PostId\": \"<string>\",\n                \"CommentId\": \"<string>\",\n                \"MediaId\": \"<string>\",\n                \"MediaUrl\": \"<string>\",\n                \"MediaType\": \"<string>\",\n                \"InsertionDateTime\": \"<dateTime>\",\n                \"UpdatedDateTime\": \"<dateTime>\"\n              }\n            ],\n            \"CommentEngagements\": [\n              {\n                \"ReactionType\": \"<string>\",\n                \"ReactionCount\": \"<integer>\"\n              },\n              {\n                \"ReactionType\": \"<string>\",\n                \"ReactionCount\": \"<integer>\"\n              }\n            ]\n          },\n          {\n            \"SessionId\": \"<string>\",\n            \"MainId\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"ParentId\": \"<string>\",\n            \"FromId\": \"<string>\",\n            \"FromName\": \"<string>\",\n            \"ToId\": \"<string>\",\n            \"ToName\": \"<string>\",\n            \"Direction\": \"<string>\",\n            \"MakerSkill\": \"<string>\",\n            \"CheckerSkill\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"CreatedDateTime\": \"<dateTime>\",\n            \"ReceivedDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\",\n            \"IsDeleted\": \"<integer>\",\n            \"IsEdited\": \"<integer>\",\n            \"DeletedDateTime\": \"<dateTime>\",\n            \"CommentText\": {\n              \"SessionId\": \"<string>\",\n              \"TextId\": \"<string>\",\n              \"Text\": \"<string>\",\n              \"InsertionDateTime\": \"<dateTime>\",\n              \"UpdatedDateTime\": \"<dateTime>\",\n              \"PreviousComment\": \"<string>\"\n            },\n            \"ReplyComments\": [\n              {\n                \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n              },\n              {\n                \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n              }\n            ],\n            \"CommentAttachments\": [\n              {\n                \"SmmType\": \"<string>\",\n                \"PostId\": \"<string>\",\n                \"CommentId\": \"<string>\",\n                \"MediaId\": \"<string>\",\n                \"MediaUrl\": \"<string>\",\n                \"MediaType\": \"<string>\",\n                \"InsertionDateTime\": \"<dateTime>\",\n                \"UpdatedDateTime\": \"<dateTime>\"\n              },\n              {\n                \"SmmType\": \"<string>\",\n                \"PostId\": \"<string>\",\n                \"CommentId\": \"<string>\",\n                \"MediaId\": \"<string>\",\n                \"MediaUrl\": \"<string>\",\n                \"MediaType\": \"<string>\",\n                \"InsertionDateTime\": \"<dateTime>\",\n                \"UpdatedDateTime\": \"<dateTime>\"\n              }\n            ],\n            \"CommentEngagements\": [\n              {\n                \"ReactionType\": \"<string>\",\n                \"ReactionCount\": \"<integer>\"\n              },\n              {\n                \"ReactionType\": \"<string>\",\n                \"ReactionCount\": \"<integer>\"\n              }\n            ]\n          }\n        ],\n        \"PostAttachments\": [\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          },\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          }\n        ],\n        \"PostEngagements\": [\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          },\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          }\n        ]\n      },\n      \"Comments\": {\n        \"SessionId\": \"<string>\",\n        \"MainId\": \"<string>\",\n        \"PostId\": \"<string>\",\n        \"CommentId\": \"<string>\",\n        \"ParentId\": \"<string>\",\n        \"FromId\": \"<string>\",\n        \"FromName\": \"<string>\",\n        \"ToId\": \"<string>\",\n        \"ToName\": \"<string>\",\n        \"Direction\": \"<string>\",\n        \"MakerSkill\": \"<string>\",\n        \"CheckerSkill\": \"<string>\",\n        \"InsertionDateTime\": \"<dateTime>\",\n        \"CreatedDateTime\": \"<dateTime>\",\n        \"ReceivedDateTime\": \"<dateTime>\",\n        \"UpdatedDateTime\": \"<dateTime>\",\n        \"IsDeleted\": \"<integer>\",\n        \"IsEdited\": \"<integer>\",\n        \"DeletedDateTime\": \"<dateTime>\",\n        \"CommentText\": {\n          \"SessionId\": \"<string>\",\n          \"TextId\": \"<string>\",\n          \"Text\": \"<string>\",\n          \"InsertionDateTime\": \"<dateTime>\",\n          \"UpdatedDateTime\": \"<dateTime>\",\n          \"PreviousComment\": \"<string>\"\n        },\n        \"ReplyComments\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n          }\n        ],\n        \"CommentAttachments\": [\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          },\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          }\n        ],\n        \"CommentEngagements\": [\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          },\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          }\n        ]\n      },\n      \"ParentComments\": {\n        \"SessionId\": \"<string>\",\n        \"MainId\": \"<string>\",\n        \"PostId\": \"<string>\",\n        \"CommentId\": \"<string>\",\n        \"ParentId\": \"<string>\",\n        \"FromId\": \"<string>\",\n        \"FromName\": \"<string>\",\n        \"ToId\": \"<string>\",\n        \"ToName\": \"<string>\",\n        \"Direction\": \"<string>\",\n        \"MakerSkill\": \"<string>\",\n        \"CheckerSkill\": \"<string>\",\n        \"InsertionDateTime\": \"<dateTime>\",\n        \"CreatedDateTime\": \"<dateTime>\",\n        \"ReceivedDateTime\": \"<dateTime>\",\n        \"UpdatedDateTime\": \"<dateTime>\",\n        \"IsDeleted\": \"<integer>\",\n        \"IsEdited\": \"<integer>\",\n        \"DeletedDateTime\": \"<dateTime>\",\n        \"CommentText\": {\n          \"SessionId\": \"<string>\",\n          \"TextId\": \"<string>\",\n          \"Text\": \"<string>\",\n          \"InsertionDateTime\": \"<dateTime>\",\n          \"UpdatedDateTime\": \"<dateTime>\",\n          \"PreviousComment\": \"<string>\"\n        },\n        \"ReplyComments\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n          }\n        ],\n        \"CommentAttachments\": [\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          },\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          }\n        ],\n        \"CommentEngagements\": [\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          },\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          }\n        ]\n      },\n      \"Engagement\": {\n        \"Channel\": \"<string>\",\n        \"SmmType\": \"<string>\",\n        \"SmmId\": \"<string>\",\n        \"ReactionType\": \"<string>\"\n      }\n    }\n  }\n}"
+														}
+													]
+												}
+											],
+											"id": "32213770-e6a5bd58-667c-4e57-a028-383349c980cb"
+										},
+										{
 											"name": "/api/v1/TmacProxy/QueuePull",
 											"id": "32213770-4112e9a5-25a6-40d7-930a-d5fbc042d5f3",
 											"protocolProfileBehavior": {
@@ -18877,107 +18978,6 @@
 										}
 									],
 									"id": "32213770-a934c04c-1073-4b92-9e90-12ff3f7ec33e"
-								},
-								{
-									"name": "SendItem",
-									"item": [
-										{
-											"name": "/api/v1/TmacProxy/SendItem",
-											"id": "32213770-cc3e045d-5e9c-4426-b79a-c30d0e2dc8a2",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json"
-													},
-													{
-														"key": "Accept",
-														"value": "text/plain"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"agentId\": \"<string>\",\n  \"inboxSessionId\": \"<string>\",\n  \"outboxSessionId\": \"<string>\",\n  \"routeId\": \"<string>\",\n  \"toList\": \"<string>\",\n  \"ccList\": \"<string>\",\n  \"bccList\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"body\": \"<string>\",\n  \"typeOfResponse\": \"<string>\",\n  \"attachmentFileList\": \"<string>\",\n  \"tmacServer\": \"<string>\"\n}",
-													"options": {
-														"raw": {
-															"headerFamily": "json",
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/TmacProxy/SendItem",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"TmacProxy",
-														"SendItem"
-													]
-												}
-											},
-											"response": [
-												{
-													"id": "32213770-0f14b8dd-93c3-404c-97b0-5421477828f7",
-													"name": "Success",
-													"originalRequest": {
-														"method": "POST",
-														"header": [
-															{
-																"key": "Content-Type",
-																"value": "application/json"
-															},
-															{
-																"key": "Accept",
-																"value": "text/plain"
-															}
-														],
-														"body": {
-															"mode": "raw",
-															"raw": "{\n  \"agentId\": \"<string>\",\n  \"inboxSessionId\": \"<string>\",\n  \"outboxSessionId\": \"<string>\",\n  \"routeId\": \"<string>\",\n  \"toList\": \"<string>\",\n  \"ccList\": \"<string>\",\n  \"bccList\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"body\": \"<string>\",\n  \"typeOfResponse\": \"<string>\",\n  \"attachmentFileList\": \"<string>\",\n  \"tmacServer\": \"<string>\"\n}",
-															"options": {
-																"raw": {
-																	"headerFamily": "json",
-																	"language": "json"
-																}
-															}
-														},
-														"url": {
-															"raw": "{{baseUrl}}/api/v1/TmacProxy/SendItem",
-															"host": [
-																"{{baseUrl}}"
-															],
-															"path": [
-																"api",
-																"v1",
-																"TmacProxy",
-																"SendItem"
-															]
-														}
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n  \"d\": {\n    \"SessionID\": \"<string>\",\n    \"InSessionID\": \"<string>\",\n    \"From\": \"<string>\",\n    \"ToList\": \"<string>\",\n    \"CcList\": \"<string>\",\n    \"BccList\": \"<string>\",\n    \"Subject\": \"<string>\",\n    \"Body\": \"<string>\",\n    \"IsHtml\": \"<boolean>\",\n    \"SendDate\": \"<string>\",\n    \"SendTime\": \"<string>\",\n    \"SendStatus\": \"<string>\",\n    \"CreatedDate\": \"<string>\",\n    \"CreatedTime\": \"<string>\",\n    \"CreatedBy\": \"<string>\",\n    \"ConversationID\": \"<string>\",\n    \"CurrentStatus\": \"<string>\",\n    \"CurrentStatusDate\": \"<string>\",\n    \"CurrentStatusTime\": \"<string>\",\n    \"CurrentServicePoint\": \"<string>\",\n    \"Mailbox\": \"<string>\",\n    \"Label\": \"<string>\",\n    \"HasAttachments\": \"<boolean>\",\n    \"CmSkill\": \"<string>\",\n    \"AgentName\": \"<string>\",\n    \"Attachments\": [\n      {\n        \"SessionID\": \"<string>\",\n        \"Direction\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"Url\": \"<string>\",\n        \"DirectoryPath\": \"<string>\",\n        \"IsCloud\": \"<boolean>\"\n      },\n      {\n        \"SessionID\": \"<string>\",\n        \"Direction\": \"<string>\",\n        \"Name\": \"<string>\",\n        \"Url\": \"<string>\",\n        \"DirectoryPath\": \"<string>\",\n        \"IsCloud\": \"<boolean>\"\n      }\n    ],\n    \"RouteId\": \"<string>\",\n    \"MailAccountId\": \"<string>\",\n    \"SmmModel\": {\n      \"SessionId\": \"<string>\",\n      \"Channel\": \"<string>\",\n      \"SubChannel\": \"<string>\",\n      \"Type\": \"<string>\",\n      \"Id\": {\n        \"MainId\": \"<string>\",\n        \"PostId\": \"<string>\",\n        \"CommentId\": \"<string>\",\n        \"ParentId\": \"<string>\"\n      },\n      \"EventDateTime\": {\n        \"EventCreatedDateTime\": \"<dateTime>\",\n        \"EventReceivedDateTime\": \"<dateTime>\"\n      },\n      \"Body\": {\n        \"Text\": \"<string>\",\n        \"SmmAttachments\": [\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          },\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          }\n        ]\n      },\n      \"Item\": \"<string>\",\n      \"StatusType\": \"<string>\",\n      \"Recipient\": {\n        \"FromId\": \"<string>\",\n        \"FromName\": \"<string>\",\n        \"ToId\": \"<string>\",\n        \"ToName\": \"<string>\"\n      },\n      \"Verb\": \"<string>\",\n      \"IsBusinessAccount\": \"<boolean>\"\n    },\n    \"SocialMediaData\": {\n      \"Channel\": \"<string>\",\n      \"CommentInSessionId\": \"<string>\",\n      \"CommentOutSessionId\": \"<string>\",\n      \"Account\": \"<string>\",\n      \"Posts\": {\n        \"SessionId\": \"<string>\",\n        \"Channel\": \"<string>\",\n        \"MainId\": \"<string>\",\n        \"PostId\": \"<string>\",\n        \"AccountId\": \"<string>\",\n        \"AccountName\": \"<string>\",\n        \"InsertionDateTime\": \"<dateTime>\",\n        \"CreatedDateTime\": \"<dateTime>\",\n        \"ReceivedDateTime\": \"<dateTime>\",\n        \"UpdatedDateTime\": \"<dateTime>\",\n        \"IsDeleted\": \"<integer>\",\n        \"DeletedDateTime\": \"<dateTime>\",\n        \"PostText\": {\n          \"SessionId\": \"<string>\",\n          \"TextId\": \"<string>\",\n          \"Text\": \"<string>\",\n          \"InsertionDateTime\": \"<dateTime>\",\n          \"UpdatedDateTime\": \"<dateTime>\",\n          \"PreviousComment\": \"<string>\"\n        },\n        \"CommentsList\": [\n          {\n            \"SessionId\": \"<string>\",\n            \"MainId\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"ParentId\": \"<string>\",\n            \"FromId\": \"<string>\",\n            \"FromName\": \"<string>\",\n            \"ToId\": \"<string>\",\n            \"ToName\": \"<string>\",\n            \"Direction\": \"<string>\",\n            \"MakerSkill\": \"<string>\",\n            \"CheckerSkill\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"CreatedDateTime\": \"<dateTime>\",\n            \"ReceivedDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\",\n            \"IsDeleted\": \"<integer>\",\n            \"IsEdited\": \"<integer>\",\n            \"DeletedDateTime\": \"<dateTime>\",\n            \"CommentText\": {\n              \"SessionId\": \"<string>\",\n              \"TextId\": \"<string>\",\n              \"Text\": \"<string>\",\n              \"InsertionDateTime\": \"<dateTime>\",\n              \"UpdatedDateTime\": \"<dateTime>\",\n              \"PreviousComment\": \"<string>\"\n            },\n            \"ReplyComments\": [\n              {\n                \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n              },\n              {\n                \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n              }\n            ],\n            \"CommentAttachments\": [\n              {\n                \"SmmType\": \"<string>\",\n                \"PostId\": \"<string>\",\n                \"CommentId\": \"<string>\",\n                \"MediaId\": \"<string>\",\n                \"MediaUrl\": \"<string>\",\n                \"MediaType\": \"<string>\",\n                \"InsertionDateTime\": \"<dateTime>\",\n                \"UpdatedDateTime\": \"<dateTime>\"\n              },\n              {\n                \"SmmType\": \"<string>\",\n                \"PostId\": \"<string>\",\n                \"CommentId\": \"<string>\",\n                \"MediaId\": \"<string>\",\n                \"MediaUrl\": \"<string>\",\n                \"MediaType\": \"<string>\",\n                \"InsertionDateTime\": \"<dateTime>\",\n                \"UpdatedDateTime\": \"<dateTime>\"\n              }\n            ],\n            \"CommentEngagements\": [\n              {\n                \"ReactionType\": \"<string>\",\n                \"ReactionCount\": \"<integer>\"\n              },\n              {\n                \"ReactionType\": \"<string>\",\n                \"ReactionCount\": \"<integer>\"\n              }\n            ]\n          },\n          {\n            \"SessionId\": \"<string>\",\n            \"MainId\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"ParentId\": \"<string>\",\n            \"FromId\": \"<string>\",\n            \"FromName\": \"<string>\",\n            \"ToId\": \"<string>\",\n            \"ToName\": \"<string>\",\n            \"Direction\": \"<string>\",\n            \"MakerSkill\": \"<string>\",\n            \"CheckerSkill\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"CreatedDateTime\": \"<dateTime>\",\n            \"ReceivedDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\",\n            \"IsDeleted\": \"<integer>\",\n            \"IsEdited\": \"<integer>\",\n            \"DeletedDateTime\": \"<dateTime>\",\n            \"CommentText\": {\n              \"SessionId\": \"<string>\",\n              \"TextId\": \"<string>\",\n              \"Text\": \"<string>\",\n              \"InsertionDateTime\": \"<dateTime>\",\n              \"UpdatedDateTime\": \"<dateTime>\",\n              \"PreviousComment\": \"<string>\"\n            },\n            \"ReplyComments\": [\n              {\n                \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n              },\n              {\n                \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n              }\n            ],\n            \"CommentAttachments\": [\n              {\n                \"SmmType\": \"<string>\",\n                \"PostId\": \"<string>\",\n                \"CommentId\": \"<string>\",\n                \"MediaId\": \"<string>\",\n                \"MediaUrl\": \"<string>\",\n                \"MediaType\": \"<string>\",\n                \"InsertionDateTime\": \"<dateTime>\",\n                \"UpdatedDateTime\": \"<dateTime>\"\n              },\n              {\n                \"SmmType\": \"<string>\",\n                \"PostId\": \"<string>\",\n                \"CommentId\": \"<string>\",\n                \"MediaId\": \"<string>\",\n                \"MediaUrl\": \"<string>\",\n                \"MediaType\": \"<string>\",\n                \"InsertionDateTime\": \"<dateTime>\",\n                \"UpdatedDateTime\": \"<dateTime>\"\n              }\n            ],\n            \"CommentEngagements\": [\n              {\n                \"ReactionType\": \"<string>\",\n                \"ReactionCount\": \"<integer>\"\n              },\n              {\n                \"ReactionType\": \"<string>\",\n                \"ReactionCount\": \"<integer>\"\n              }\n            ]\n          }\n        ],\n        \"PostAttachments\": [\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          },\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          }\n        ],\n        \"PostEngagements\": [\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          },\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          }\n        ]\n      },\n      \"Comments\": {\n        \"SessionId\": \"<string>\",\n        \"MainId\": \"<string>\",\n        \"PostId\": \"<string>\",\n        \"CommentId\": \"<string>\",\n        \"ParentId\": \"<string>\",\n        \"FromId\": \"<string>\",\n        \"FromName\": \"<string>\",\n        \"ToId\": \"<string>\",\n        \"ToName\": \"<string>\",\n        \"Direction\": \"<string>\",\n        \"MakerSkill\": \"<string>\",\n        \"CheckerSkill\": \"<string>\",\n        \"InsertionDateTime\": \"<dateTime>\",\n        \"CreatedDateTime\": \"<dateTime>\",\n        \"ReceivedDateTime\": \"<dateTime>\",\n        \"UpdatedDateTime\": \"<dateTime>\",\n        \"IsDeleted\": \"<integer>\",\n        \"IsEdited\": \"<integer>\",\n        \"DeletedDateTime\": \"<dateTime>\",\n        \"CommentText\": {\n          \"SessionId\": \"<string>\",\n          \"TextId\": \"<string>\",\n          \"Text\": \"<string>\",\n          \"InsertionDateTime\": \"<dateTime>\",\n          \"UpdatedDateTime\": \"<dateTime>\",\n          \"PreviousComment\": \"<string>\"\n        },\n        \"ReplyComments\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n          }\n        ],\n        \"CommentAttachments\": [\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          },\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          }\n        ],\n        \"CommentEngagements\": [\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          },\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          }\n        ]\n      },\n      \"ParentComments\": {\n        \"SessionId\": \"<string>\",\n        \"MainId\": \"<string>\",\n        \"PostId\": \"<string>\",\n        \"CommentId\": \"<string>\",\n        \"ParentId\": \"<string>\",\n        \"FromId\": \"<string>\",\n        \"FromName\": \"<string>\",\n        \"ToId\": \"<string>\",\n        \"ToName\": \"<string>\",\n        \"Direction\": \"<string>\",\n        \"MakerSkill\": \"<string>\",\n        \"CheckerSkill\": \"<string>\",\n        \"InsertionDateTime\": \"<dateTime>\",\n        \"CreatedDateTime\": \"<dateTime>\",\n        \"ReceivedDateTime\": \"<dateTime>\",\n        \"UpdatedDateTime\": \"<dateTime>\",\n        \"IsDeleted\": \"<integer>\",\n        \"IsEdited\": \"<integer>\",\n        \"DeletedDateTime\": \"<dateTime>\",\n        \"CommentText\": {\n          \"SessionId\": \"<string>\",\n          \"TextId\": \"<string>\",\n          \"Text\": \"<string>\",\n          \"InsertionDateTime\": \"<dateTime>\",\n          \"UpdatedDateTime\": \"<dateTime>\",\n          \"PreviousComment\": \"<string>\"\n        },\n        \"ReplyComments\": [\n          {\n            \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n          },\n          {\n            \"value\": \"<Circular reference to #/components/schemas/MediaMatrixDataModelSmmComments detected>\"\n          }\n        ],\n        \"CommentAttachments\": [\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          },\n          {\n            \"SmmType\": \"<string>\",\n            \"PostId\": \"<string>\",\n            \"CommentId\": \"<string>\",\n            \"MediaId\": \"<string>\",\n            \"MediaUrl\": \"<string>\",\n            \"MediaType\": \"<string>\",\n            \"InsertionDateTime\": \"<dateTime>\",\n            \"UpdatedDateTime\": \"<dateTime>\"\n          }\n        ],\n        \"CommentEngagements\": [\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          },\n          {\n            \"ReactionType\": \"<string>\",\n            \"ReactionCount\": \"<integer>\"\n          }\n        ]\n      },\n      \"Engagement\": {\n        \"Channel\": \"<string>\",\n        \"SmmType\": \"<string>\",\n        \"SmmId\": \"<string>\",\n        \"ReactionType\": \"<string>\"\n      }\n    }\n  }\n}"
-												}
-											]
-										}
-									],
-									"id": "32213770-e6a5bd58-667c-4e57-a028-383349c980cb"
 								}
 							],
 							"id": "32213770-c8c2646f-a7ae-4229-a5f9-8dfb7abcb9c5"
