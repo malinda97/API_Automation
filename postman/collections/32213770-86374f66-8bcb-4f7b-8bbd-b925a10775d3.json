@@ -72,7 +72,14 @@
 												"header": [
 													{
 														"key": "Accept",
-														"value": "text/plain"
+														"value": "text/plain",
+														"disabled": true
+													},
+													{
+														"key": "",
+														"value": "",
+														"type": "text",
+														"disabled": true
 													}
 												],
 												"body": {
@@ -94,6 +101,14 @@
 														"v1",
 														"TmacProxy",
 														"GetProxyVersion"
+													],
+													"query": [
+														{
+															"key": "",
+															"value": "",
+															"type": "text",
+															"disabled": true
+														}
 													]
 												}
 											},
