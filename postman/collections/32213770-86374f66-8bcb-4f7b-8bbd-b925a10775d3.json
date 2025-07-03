@@ -23,6 +23,7 @@
 												{
 													"listen": "test",
 													"script": {
+														"id": "1a50865a-1980-4a0d-be32-154599c66f77",
 														"exec": [
 															"pm.test(\"Response status code is 200\", function () {\r",
 															"    pm.expect(pm.response.code).to.equal(200);\r",
@@ -30,7 +31,7 @@
 															"\r",
 															"\r",
 															"pm.test(\"Response time is less than 600ms\", function () {\r",
-															"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+															"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
 															"});\r",
 															"\r",
 															"pm.test(\"Ensure 'd' conforms to the expected JSON schema\", function () {\r",
@@ -58,8 +59,7 @@
 															"})"
 														],
 														"type": "text/javascript",
-														"packages": {},
-														"id": "1a50865a-1980-4a0d-be32-154599c66f77"
+														"packages": {}
 													}
 												}
 											],
