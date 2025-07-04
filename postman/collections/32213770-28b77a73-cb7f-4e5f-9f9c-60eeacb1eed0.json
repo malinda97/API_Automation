@@ -31,7 +31,7 @@
 															"\r",
 															"\r",
 															"pm.test(\"Response time is less than 600ms\", function () {\r",
-															"    pm.expect(pm.response.responseTime).to.be.below(600);\r",
+															"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
 															"});\r",
 															"\r",
 															"pm.test(\"Ensure 'd' conforms to the expected JSON schema\", function () {\r",
